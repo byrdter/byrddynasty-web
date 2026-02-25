@@ -1,18 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  /* byrddynasty brand colors */
-  --background: #08090c;
+  /* byrddynasty brand colors - updated to match logo */
+  --background: #0a1628;
   --foreground: #ffffff;
-  --primary: #00d4ff;
-  --card-bg: #1a1a2e;
-  --card-border: #2a2a3e;
+  --primary: #00d4ff; /* cyan/turquoise */
+  --secondary: #d4af37; /* gold */
+  --accent: #a855f7; /* purple/magenta */
+  --card-bg: #0f2847;
+  --card-border: #1e3a5f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
   --color-card: var(--card-bg);
   --color-card-border: var(--card-border);
 
@@ -43,15 +47,43 @@ a:hover {
 
 /* Utility classes for gradients (used in cards) */
 .gradient-card {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(26, 26, 46, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(168, 85, 247, 0.05) 50%, rgba(15, 40, 71, 0.9) 100%);
   border: 1px solid var(--card-border);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .gradient-card:hover {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(26, 26, 46, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(168, 85, 247, 0.1) 50%, rgba(15, 40, 71, 1) 100%);
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3), 0 4px 12px rgba(168, 85, 247, 0.2);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+.gradient-card:hover::before {
+  opacity: 1;
+}
+
+/* Circuit board pattern overlay (optional) */
+.circuit-pattern {
+  background-image:
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 /* Smooth scrolling */

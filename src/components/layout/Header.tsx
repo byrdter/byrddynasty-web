@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Header() {
@@ -20,8 +21,18 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-primary">byrddynasty</span>
+          <Link href="/" className="flex items-center space-x-3">
+            <Image
+              src="/images/byrddynasty-logo.png"
+              alt="Byrddynasty Logo"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+            <span className="text-xl font-bold">
+              <span className="text-foreground">Byrddynasty</span>
+              <span className="text-primary text-sm ml-2">AGENTIC AI</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -51,7 +51,7 @@ export default function SolutionSection() {
               className="gradient-card p-8 rounded-xl"
             >
               <div className="mb-6">
-                <span className="text-sm font-bold text-primary tracking-wider">
+                <span className="text-sm font-bold text-secondary tracking-wider">
                   PILLAR {index + 1}
                 </span>
                 <h3 className="text-2xl font-bold mt-2 mb-1">{pillar.name}</h3>

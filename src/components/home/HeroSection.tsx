@@ -18,14 +18,27 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
+    <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background" />
+      <div
+        className="absolute inset-0 opacity-30 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(/images/hero-background.jpg)',
+          filter: 'brightness(0.4)'
+        }}
+      />
+      {/* Circuit pattern overlay */}
+      <div className="absolute inset-0 circuit-pattern opacity-50" />
+      {/* Gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
       <div className="relative max-w-4xl mx-auto text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
           Learn to Build & Deploy{' '}
-          <span className="text-primary">Real-World Agentic AI</span>{' '}
+          <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
+            Real-World Agentic AI
+          </span>{' '}
           Applications
         </h1>
 
