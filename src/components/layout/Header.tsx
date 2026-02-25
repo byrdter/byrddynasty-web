@@ -18,10 +18,10 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-card-border">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-card-border">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/byrddynasty-logo.png"
               alt="Byrddynasty Logo"
@@ -29,10 +29,6 @@ export default function Header() {
               height={48}
               className="rounded-full"
             />
-            <span className="text-xl font-bold">
-              <span className="text-foreground">Byrddynasty</span>
-              <span className="text-primary text-sm ml-2">AGENTIC AI</span>
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -49,13 +45,7 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              href="/newsletter"
-              className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
-            >
-              Sign in
-            </Link>
+          <div className="hidden md:flex items-center">
             <Link
               href="/newsletter"
               className="px-4 py-2 text-sm font-medium bg-primary text-background rounded-lg hover:bg-primary/90 transition-colors"
@@ -101,16 +91,10 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="flex flex-col space-y-2 pt-4 border-t border-card-border">
+              <div className="pt-4 border-t border-card-border">
                 <Link
                   href="/newsletter"
-                  className="px-4 py-2 text-center text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
-                >
-                  Sign in
-                </Link>
-                <Link
-                  href="/newsletter"
-                  className="px-4 py-2 text-center text-sm font-medium bg-primary text-background rounded-lg hover:bg-primary/90 transition-colors"
+                  className="block px-4 py-2 text-center text-sm font-medium bg-primary text-background rounded-lg hover:bg-primary/90 transition-colors"
                 >
                   Subscribe
                 </Link>
@@ -119,6 +103,13 @@ export default function Header() {
           </div>
         )}
       </nav>
+
+      {/* Brand Name */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          Byrddynasty
+        </h1>
+      </div>
     </header>
   )
 }
