@@ -15,18 +15,34 @@ export default function HeroSection() {
       {/* Gradient overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
-      <div className="relative max-w-4xl mx-auto text-center">
+      <div className="relative max-w-5xl mx-auto text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-          Learn to Build & Deploy{' '}
+          Build Your One-Person{' '}
           <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-            Real-World Agentic AI
+            $100K+ Business
           </span>{' '}
-          Applications
+          with AI Agents
         </h1>
 
-        <p className="text-lg sm:text-xl text-foreground/60 mb-12 max-w-2xl mx-auto">
-          Master the Nine Essential Skills for building production-ready AI systems that don't fall apart in production.
+        <p className="text-lg sm:text-xl text-foreground/60 mb-8 max-w-3xl mx-auto">
+          No employees. No VC. No BS. Just you + AI doing what used to take a 10-person team.
         </p>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <a
+            href="#how-it-works"
+            className="px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold text-lg transition-all hover:scale-105"
+          >
+            See How It Works
+          </a>
+          <a
+            href="/newsletter"
+            className="px-8 py-4 border-2 border-primary hover:bg-primary/10 text-foreground rounded-lg font-semibold text-lg transition-all"
+          >
+            Start Free
+          </a>
+        </div>
 
         {/* Trust indicators */}
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-foreground/40">
@@ -34,19 +50,19 @@ export default function HeroSection() {
             <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
             </svg>
-            <span>Join other AI builders</span>
+            <span>Join 2,500+ solo founders building with AI</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <span>Production-ready techniques</span>
+            <span>Real businesses, real revenue</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
             </svg>
-            <span>Weekly video tutorials</span>
+            <span>Weekly playbooks & tutorials</span>
           </div>
         </div>
       </div>
