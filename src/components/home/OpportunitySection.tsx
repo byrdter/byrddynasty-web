@@ -2,7 +2,7 @@ export default function OpportunitySection() {
   const tiers = [
     {
       title: "Solo Founder",
-      revenue: "$20K-$50K/year",
+      revenue: "$20K-$150K/year",
       employees: "Just you + AI agents",
       examples: [
         "Compliance automation",
@@ -15,7 +15,7 @@ export default function OpportunitySection() {
     },
     {
       title: "Small Team",
-      revenue: "$100K-$300K/year",
+      revenue: "$200K-$750K/year",
       employees: "2-5 people + AI augmentation",
       examples: [
         "SaaS products with AI support",
@@ -28,7 +28,7 @@ export default function OpportunitySection() {
     },
     {
       title: "Micro Enterprise",
-      revenue: "$500K-$1M/year",
+      revenue: "$750K-$2M+/year",
       employees: "6-10 people, AI-first operations",
       examples: [
         "Hybrid human-AI teams",
@@ -92,18 +92,6 @@ export default function OpportunitySection() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="/business-ideas"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold transition-all hover:scale-105"
-          >
-            Explore 50+ Business Ideas
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>
