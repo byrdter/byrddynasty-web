@@ -24,9 +24,9 @@ export default function Header() {
             <Image
               src="/images/byrddynasty-logo.png"
               alt="Byrddynasty - Understanding AI"
-              width={120}
-              height={120}
-              className="h-auto"
+              width={56}
+              height={56}
+              className="h-14 w-auto"
             />
           </Link>
 
