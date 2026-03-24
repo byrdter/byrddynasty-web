@@ -43,16 +43,6 @@ export default function Header() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center">
-            <Link
-              href="/newsletter"
-              className="px-4 py-2 text-sm font-medium bg-primary text-background rounded-lg hover:bg-primary/90 transition-colors"
-            >
-              Subscribe
-            </Link>
-          </div>
-
           {/* Mobile menu button */}
           <button
             className="md:hidden p-2"
@@ -90,14 +80,6 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-card-border">
-                <Link
-                  href="/newsletter"
-                  className="block px-4 py-2 text-center text-sm font-medium bg-primary text-background rounded-lg hover:bg-primary/90 transition-colors"
-                >
-                  Subscribe
-                </Link>
-              </div>
             </div>
           </div>
         )}

@@ -29,19 +29,13 @@ export default function HeroSection() {
           AI agents doing the work of 50 employees.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        {/* CTA Button */}
+        <div className="flex justify-center mb-12">
           <a
             href="#how-it-works"
-            className="px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold text-lg transition-all hover:scale-105"
+            className="px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
           >
             See How It Works
-          </a>
-          <a
-            href="/newsletter"
-            className="px-8 py-4 border-2 border-primary hover:bg-primary/10 text-foreground rounded-lg font-semibold text-lg transition-all"
-          >
-            Start Free
           </a>
         </div>
 
