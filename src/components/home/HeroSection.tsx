@@ -33,7 +33,7 @@ export default function HeroSection() {
         <div className="flex justify-center mb-12">
           <a
             href="#how-it-works"
-            className="px-8 py-4 bg-primary hover:bg-primary/90 text-navy-900 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
+            className="px-8 py-4 bg-white text-black hover:bg-gray-100 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
           >
             See How It Works
           </a>
