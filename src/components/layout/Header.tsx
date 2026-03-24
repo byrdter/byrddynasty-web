@@ -23,10 +23,10 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <Image
               src="/images/byrddynasty-logo.png"
-              alt="Byrddynasty Logo"
-              width={48}
-              height={48}
-              className="rounded-full"
+              alt="Byrddynasty - Understanding AI"
+              width={120}
+              height={120}
+              className="h-auto"
             />
           </Link>
 
@@ -102,13 +102,6 @@ export default function Header() {
           </div>
         )}
       </nav>
-
-      {/* Brand Name */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <h1 className="text-3xl sm:text-4xl font-bold text-foreground">
-          Byrddynasty
-        </h1>
-      </div>
     </header>
   )
 }
