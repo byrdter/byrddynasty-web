@@ -102,6 +102,15 @@ export default function Header() {
           </div>
         )}
       </nav>
+
+      {/* Brand Name - Links to Homepage */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <Link href="/" className="block">
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground hover:text-primary transition-colors">
+            Byrddynasty
+          </h1>
+        </Link>
+      </div>
     </header>
   )
 }
