@@ -17,16 +17,16 @@ export default function HeroSection() {
 
       <div className="relative max-w-5xl mx-auto text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-          Build Your{' '}
+          Transform Your{' '}
           <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-            Micro Enterprise
+            Small Business
           </span>{' '}
           with Agentic AI
         </h1>
 
         <p className="text-lg sm:text-xl text-foreground/60 mb-8 max-w-3xl mx-auto">
-          1 to 10 people building $100K-$2M+ businesses. Solo founders earning $150K. Small teams hitting $750K.
-          AI agents doing the work of 50 employees.
+          We specialize in small businesses—from solo founders to 100+ person teams.
+          AI agents doing the work of 50 employees, whether you build it yourself or we build it for you.
         </p>
 
         {/* CTA Button */}

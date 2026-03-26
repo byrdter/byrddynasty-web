@@ -46,7 +46,7 @@ export default function GhostTeamSection() {
             </span>
           </h2>
           <p className="text-lg text-foreground/60 max-w-3xl mx-auto">
-            Solo founders running multi-million-dollar businesses aren't doing it alone. They're operating a coordinated network of AI agents working around the clock.
+            Now, more and more, small businesses aren't doing it alone. They're operating a coordinated network of AI agents working around the clock.
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export default function GhostTeamSection() {
         <div className="text-center mt-12">
           <a
             href="/frameworks"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-[#0a1628] rounded-lg font-semibold transition-all hover:scale-105 shadow-lg"
           >
             See the Full Framework
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

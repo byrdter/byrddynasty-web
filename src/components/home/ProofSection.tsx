@@ -31,7 +31,7 @@ export default function ProofSection() {
             </span>
           </h2>
           <p className="text-lg text-foreground/60 max-w-3xl mx-auto">
-            These aren't unicorns or VC-backed startups. They're profitable businesses built by ultra small groups, and in many cases, by one person + AI agents. This is the new normal.
+            These aren't unicorns or VC-based startups. They're profitable businesses built by small groups, and in many cases, by one person + AI agents. This is the new normal.
           </p>
         </div>
 

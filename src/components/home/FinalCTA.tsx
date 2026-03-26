@@ -12,7 +12,7 @@ export default function FinalCTA() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/newsletter"
-            className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+            className="inline-block px-8 py-4 bg-primary text-[#0a1628] font-semibold rounded-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-lg"
           >
             Subscribe to Newsletter
           </a>
@@ -20,7 +20,7 @@ export default function FinalCTA() {
             href="https://youtube.com/@byrddynasty"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-card border border-card-border text-foreground font-semibold rounded-lg hover:border-primary transition-colors"
+            className="inline-block px-8 py-4 bg-[#1e3a5f] text-white border border-card-border font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
           >
             Watch on YouTube
           </a>

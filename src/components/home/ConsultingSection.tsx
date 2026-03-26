@@ -46,15 +46,15 @@ export default function ConsultingSection() {
             </ul>
             <a
               href="/workflows"
-              className="inline-block px-6 py-3 bg-card-border text-foreground font-semibold rounded-lg hover:bg-card-border/80 transition-colors"
+              className="inline-block px-6 py-3 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
             >
               Browse Resources
             </a>
           </div>
 
           {/* Done-For-You Path */}
-          <div className="gradient-card p-8 rounded-xl border-2 border-primary/50 relative">
-            <div className="absolute -top-3 right-6 bg-primary text-background px-3 py-1 rounded-full text-xs font-bold">
+          <div className="gradient-card p-8 rounded-xl border-2 border-primary/50 relative overflow-visible">
+            <div className="absolute -top-3 right-6 bg-primary text-[#0a1628] px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-lg">
               RECOMMENDED FOR FAST RESULTS
             </div>
             <div className="text-4xl mb-4">🚀</div>
@@ -84,7 +84,7 @@ export default function ConsultingSection() {
             </ul>
             <a
               href="/services"
-              className="inline-block px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-lg"
+              className="inline-block px-6 py-3 bg-primary text-[#0a1628] font-semibold rounded-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-lg"
             >
               View Services
             </a>
@@ -122,7 +122,7 @@ export default function ConsultingSection() {
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-4 bg-white !text-black hover:bg-gray-100 rounded-lg font-semibold transition-all hover:scale-105 shadow-lg"
+            className="inline-block px-8 py-4 bg-white text-black hover:bg-gray-100 rounded-lg font-semibold transition-all hover:scale-105 shadow-lg"
           >
             Book Free Consultation
           </a>
