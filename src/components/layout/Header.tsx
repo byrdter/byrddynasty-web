@@ -8,8 +8,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navigation = [
-    { name: 'Tool Stack', href: '/tool-stack' },
-    { name: 'Founders', href: '/founder-stories' },
+    { name: 'Services', href: '/services' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'Workflows', href: '/workflows' },
     { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' },
@@ -23,7 +23,7 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <Image
               src="/images/byrddynasty-logo.png"
-              alt="Byrddynasty - Understanding AI"
+              alt="Byrddynasty - AI for Small Business"
               width={56}
               height={56}
               className="h-14 w-auto"
@@ -31,16 +31,24 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="text-foreground/80 hover:text-primary transition-colors text-sm"
               >
                 {item.name}
               </Link>
             ))}
+
+            {/* CTA Button */}
+            <a
+              href="/contact"
+              className="px-6 py-2 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-lg text-sm"
+            >
+              Book Call
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -80,6 +88,13 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <a
+                href="/contact"
+                className="inline-block px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-colors text-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Book Call
+              </a>
             </div>
           </div>
         )}
