@@ -97,7 +97,7 @@ export default function WorkflowsPage() {
                   </div>
                 </div>
 
-                <button className="w-full px-4 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold transition-all hover:scale-105">
+                <button className="w-full px-4 py-3 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold transition-all hover:scale-105">
                   View Workflow →
                 </button>
               </div>
@@ -115,7 +115,7 @@ export default function WorkflowsPage() {
           </p>
           <a
             href="/newsletter"
-            className="inline-block px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold text-lg transition-all hover:scale-105"
+            className="inline-block px-8 py-4 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold text-lg transition-all hover:scale-105"
           >
             Get Full Library
           </a>

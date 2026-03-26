@@ -118,7 +118,7 @@ export default function IndustriesPage() {
                       </li>
                     ))}
                   </ul>
-                  <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold transition-all hover:scale-105">
+                  <button className="px-6 py-3 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold transition-all hover:scale-105">
                     View Full Industry Guide →
                   </button>
                 </div>
@@ -137,7 +137,7 @@ export default function IndustriesPage() {
           </p>
           <a
             href="/business-ideas"
-            className="inline-block px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold text-lg transition-all hover:scale-105"
+            className="inline-block px-8 py-4 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold text-lg transition-all hover:scale-105"
           >
             Explore Business Ideas →
           </a>

@@ -21,7 +21,7 @@ export default function BlogPage() {
       {/* Categories */}
       {categories.length > 0 && (
         <div className="mb-12 flex flex-wrap gap-3 justify-center">
-          <button className="px-4 py-2 bg-primary text-background font-medium rounded-full hover:bg-primary/90 transition-colors">
+          <button className="px-4 py-2 bg-[#1e3a5f] text-white font-medium rounded-full hover:bg-[#2a4a75] transition-colors">
             All Posts
           </button>
           {categories.map((category) => (
@@ -46,7 +46,7 @@ export default function BlogPage() {
           <div className="flex gap-4 justify-center">
             <Link
               href="/newsletter"
-              className="px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+              className="px-6 py-3 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
             >
               Subscribe for Updates
             </Link>
@@ -108,7 +108,7 @@ export default function BlogPage() {
         </p>
         <Link
           href="/newsletter"
-          className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+          className="inline-block px-8 py-4 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
         >
           Subscribe to Newsletter
         </Link>

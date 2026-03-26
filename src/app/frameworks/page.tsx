@@ -85,7 +85,7 @@ export default function FrameworksPage() {
                       </li>
                     ))}
                   </ul>
-                  <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold transition-all hover:scale-105">
+                  <button className="px-6 py-3 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold transition-all hover:scale-105">
                     View Full Framework →
                   </button>
                 </div>
@@ -104,7 +104,7 @@ export default function FrameworksPage() {
           </p>
           <a
             href="/newsletter"
-            className="inline-block px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold text-lg transition-all hover:scale-105"
+            className="inline-block px-8 py-4 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold text-lg transition-all hover:scale-105"
           >
             Get Free Framework Library
           </a>

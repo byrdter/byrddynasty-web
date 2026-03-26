@@ -191,7 +191,7 @@ export default function LearnPage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/newsletter"
-            className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+            className="px-8 py-4 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
           >
             Get Free Weekly Lessons
           </a>
@@ -278,7 +278,7 @@ export default function LearnPage() {
         </p>
         <a
           href="/newsletter"
-          className="inline-block px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+          className="inline-block px-8 py-4 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
         >
           Subscribe to Newsletter
         </a>

@@ -92,7 +92,7 @@ export default function GhostTeamSection() {
         <div className="text-center mt-12">
           <a
             href="/frameworks"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-[#0a1628] rounded-lg font-semibold transition-all hover:scale-105 shadow-lg"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-lg"
           >
             See the Full Framework
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

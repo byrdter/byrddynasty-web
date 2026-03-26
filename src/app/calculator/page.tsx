@@ -111,7 +111,7 @@ export default function CalculatorPage() {
               </ul>
               <a
                 href="/tool-stack"
-                className="inline-block px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold transition-all hover:scale-105"
+                className="inline-block px-6 py-3 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold transition-all hover:scale-105"
               >
                 See Complete Tool Stack →
               </a>
@@ -129,7 +129,7 @@ export default function CalculatorPage() {
           </p>
           <a
             href="/frameworks"
-            className="inline-block px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold text-lg transition-all hover:scale-105"
+            className="inline-block px-8 py-4 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold text-lg transition-all hover:scale-105"
           >
             Get Implementation Guide
           </a>

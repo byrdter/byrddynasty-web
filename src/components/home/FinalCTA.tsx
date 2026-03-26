@@ -12,7 +12,7 @@ export default function FinalCTA() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/newsletter"
-            className="inline-block px-8 py-4 bg-primary text-[#0a1628] font-semibold rounded-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-lg"
+            className="inline-block px-8 py-4 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-all hover:scale-105 shadow-lg"
           >
             Subscribe to Newsletter
           </a>

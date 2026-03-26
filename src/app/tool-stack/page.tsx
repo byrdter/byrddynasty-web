@@ -103,7 +103,7 @@ export default function ToolStackPage() {
           </p>
           <a
             href="/calculator"
-            className="inline-block px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold text-lg transition-all hover:scale-105"
+            className="inline-block px-8 py-4 bg-[#1e3a5f] hover:bg-[#2a4a75] text-white rounded-lg font-semibold text-lg transition-all hover:scale-105"
           >
             Build Your Stack →
           </a>

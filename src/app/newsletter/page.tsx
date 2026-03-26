@@ -43,7 +43,7 @@ export default function NewsletterPage() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-8 py-4 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === 'loading' ? 'Subscribing...' : 'Subscribe to Newsletter'}
             </button>

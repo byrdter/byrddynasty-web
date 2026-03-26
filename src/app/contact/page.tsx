@@ -194,7 +194,7 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+              className="w-full px-8 py-4 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
             >
               {status === 'loading' ? 'Submitting...' : 'Book Free Consultation'}
             </button>

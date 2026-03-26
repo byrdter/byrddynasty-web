@@ -117,7 +117,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="flex gap-4 justify-center">
             <Link
               href="/newsletter"
-              className="px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+              className="px-6 py-3 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
             >
               Subscribe to Newsletter
             </Link>

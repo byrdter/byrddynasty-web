@@ -54,7 +54,7 @@ export default function ConsultingSection() {
 
           {/* Done-For-You Path */}
           <div className="gradient-card p-8 rounded-xl border-2 border-primary/50 relative overflow-visible">
-            <div className="absolute -top-3 right-6 bg-primary text-[#0a1628] px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-lg">
+            <div className="absolute -top-3 right-6 bg-[#1e3a5f] text-white px-3 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-lg">
               RECOMMENDED FOR FAST RESULTS
             </div>
             <div className="text-4xl mb-4">🚀</div>
@@ -84,7 +84,7 @@ export default function ConsultingSection() {
             </ul>
             <a
               href="/services"
-              className="inline-block px-6 py-3 bg-primary text-[#0a1628] font-semibold rounded-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-lg"
+              className="inline-block px-6 py-3 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-all hover:scale-105 shadow-lg"
             >
               View Services
             </a>
