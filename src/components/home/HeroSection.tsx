@@ -16,24 +16,35 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
       <div className="relative max-w-5xl mx-auto text-center">
+        <div className="inline-block bg-primary/10 border border-primary/30 text-primary text-sm font-semibold px-4 py-2 rounded-full mb-6">
+          8 Phases Built in Public · 7 Videos on YouTube · Running 24/7
+        </div>
+
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-          Transform Your{' '}
+          Build Your{' '}
           <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
-            Small Business
+            Second Brain.
           </span>{' '}
-          with Agentic AI
+          Work Smarter with Agentic AI
         </h1>
 
         <p className="text-lg sm:text-xl text-foreground/60 mb-8 max-w-3xl mx-auto">
-          We specialize in small businesses—from solo founders to 100+ person teams.
-          AI agents doing the work of 50 employees, whether you build it yourself or we build it for you.
+          A second brain is an AI-powered system that remembers everything, automates the mundane,
+          and surfaces hidden insights — for individuals who want to think better and businesses
+          that want to scale what they know.
         </p>
 
-        {/* CTA Button */}
-        <div className="flex justify-center mb-12">
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <a
+            href="/second-brain"
+            className="px-8 py-4 bg-white !text-black hover:bg-gray-100 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
+          >
+            What Is a Second Brain?
+          </a>
           <a
             href="#how-it-works"
-            className="px-8 py-4 bg-white !text-black hover:bg-gray-100 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
+            className="px-8 py-4 bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 rounded-lg font-semibold text-lg transition-all"
           >
             See How It Works
           </a>
@@ -45,13 +56,13 @@ export default function HeroSection() {
             <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
             </svg>
-            <span>Join 2,500+ solo founders building with AI</span>
+            <span>Join 2,500+ builders learning with AI</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <span>Real businesses, real revenue</span>
+            <span>Built in public — JARVIS lives in production</span>
           </div>
           <div className="flex items-center gap-2">
             <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
