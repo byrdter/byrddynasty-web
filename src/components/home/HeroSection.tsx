@@ -16,10 +16,6 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
       <div className="relative max-w-5xl mx-auto text-center">
-        <div className="inline-block bg-primary/10 border border-primary/30 text-primary text-sm font-semibold px-4 py-2 rounded-full mb-6">
-          8 Phases Built in Public · 7 Videos on YouTube · Running 24/7
-        </div>
-
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
           Build Your{' '}
           <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">

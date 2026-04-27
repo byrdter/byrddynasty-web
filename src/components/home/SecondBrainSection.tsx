@@ -90,14 +90,14 @@ export default function SecondBrainSection() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { number: '8', label: 'Phases Built' },
-                { number: '7+', label: 'Videos Published' },
-                { number: '24/7', label: 'Autonomous Operation' },
-                { number: '87%', label: 'Time Saved' },
+                { icon: '🧠', label: 'Multiple phases built' },
+                { icon: '📺', label: 'Growing video library' },
+                { icon: '⏱️', label: 'Runs autonomously 24/7' },
+                { icon: '🔓', label: 'Fully built in public' },
               ].map((stat) => (
                 <div key={stat.label} className="bg-card/50 border border-card-border rounded-xl p-4 text-center">
-                  <div className="text-2xl font-extrabold text-primary">{stat.number}</div>
-                  <div className="text-xs text-foreground/50 mt-1">{stat.label}</div>
+                  <div className="text-2xl mb-1">{stat.icon}</div>
+                  <div className="text-xs text-foreground/50">{stat.label}</div>
                 </div>
               ))}
             </div>
