@@ -4,32 +4,32 @@ const capabilities = [
   {
     icon: '🧠',
     title: 'Never Forget',
-    body: 'Everything you learn, read, and decide is captured and retrievable — no more lost ideas or forgotten context.',
+    body: 'Everything you learn, read, and decide is captured and retrievable. Persistent memory compounds — a two-year-old brain vastly outperforms one started yesterday.',
   },
   {
-    icon: '⏰',
-    title: 'Proactive Reminders',
-    body: 'The right information surfaces at the right time, without you having to search for it.',
+    icon: '🌙',
+    title: 'Dream State Processing',
+    body: 'While you sleep, the system reviews the day\'s inputs. Wake up to: "You mentioned X today — this aligns with a strategy you abandoned 6 months ago. Revisit?"',
   },
   {
     icon: '🔍',
     title: 'Hidden Insights',
-    body: 'Discover patterns across your knowledge that you\'d never find manually — connections between ideas separated by months.',
+    body: 'Discover patterns across your knowledge that you\'d never find manually — connections between ideas separated by months or domains.',
+  },
+  {
+    icon: '🎙️',
+    title: 'Vibe-to-Workflow',
+    body: 'Describe a process in a voice memo. Your second brain automatically builds the automation to execute it — no code, no manual setup.',
   },
   {
     icon: '⚡',
     title: 'Automate the Mundane',
-    body: 'Repetitive tasks, routine decisions, and recurring workflows run themselves while you focus on what matters.',
-  },
-  {
-    icon: '🔄',
-    title: 'Reflection & Growth',
-    body: 'Regular synthesis of your experience creates an ongoing record of how your thinking evolves.',
+    body: 'Repetitive tasks, routine decisions, and recurring workflows run themselves while you focus on what only humans can do.',
   },
   {
     icon: '💡',
-    title: 'New Ways of Working',
-    body: 'Your second brain suggests better approaches, spots blind spots, and proposes what you haven\'t considered.',
+    title: 'Institutional Memory',
+    body: 'For organizations: when a key employee leaves, their decision-making patterns stay. The company never loses its best thinking.',
   },
 ]
 
@@ -51,8 +51,10 @@ export default function SecondBrainSection() {
           </h2>
           <p className="text-lg text-foreground/60 max-w-3xl mx-auto">
             Your biological brain is built for thinking — not remembering. A second brain is an
-            AI-powered system that handles storage, retrieval, and automation so your first brain
-            can do what only humans can: imagine, create, and decide.
+            AI-powered system that captures, organizes, and acts on information so your first brain
+            can do what only humans can: imagine, create, and decide. In 2026, the shift is from
+            passive note storage to <em>Personal Context Management</em> — proactive intelligence
+            that surfaces the right knowledge at the right moment.
           </p>
         </div>
 
