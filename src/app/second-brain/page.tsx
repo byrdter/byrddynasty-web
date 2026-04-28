@@ -492,7 +492,7 @@ export default function SecondBrainPage() {
               roadmap. Includes an interactive diagram of all 7 core subsystems.
             </p>
             <a
-              href="https://second-brain-guide.vercel.app"
+              href="https://second-brain-guide-rho.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white !text-black hover:bg-gray-100 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
