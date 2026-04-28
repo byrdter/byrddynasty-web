@@ -480,6 +480,47 @@ export default function SecondBrainPage() {
         </div>
       </div>
 
+      {/* Interactive Guide CTA */}
+      <div className="gradient-card p-10 rounded-xl mb-16 border-2 border-primary/30">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div className="text-sm text-primary font-semibold mb-2">Interactive Resource</div>
+            <h2 className="text-3xl font-bold mb-3">Explore the Interactive Guide</h2>
+            <p className="text-foreground/70 mb-6">
+              Choose your tier — Individual, SME, or Enterprise — and explore an animated,
+              in-depth breakdown of benefits, architecture, tech stack, and implementation
+              roadmap. Includes an interactive diagram of all 7 core subsystems.
+            </p>
+            <a
+              href="https://second-brain-guide.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white !text-black hover:bg-gray-100 rounded-lg font-semibold text-lg transition-all hover:scale-105 shadow-lg"
+            >
+              Open Interactive Guide
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              { icon: '👤', label: 'Individual tier' },
+              { icon: '🏢', label: 'SME tier' },
+              { icon: '🏛️', label: 'Enterprise tier' },
+              { icon: '🔬', label: 'Architecture explorer' },
+              { icon: '🗺️', label: 'Implementation roadmap' },
+              { icon: '⚡', label: 'Interactive diagram' },
+            ].map((item) => (
+              <div key={item.label} className="bg-card/50 border border-card-border rounded-xl p-3 flex items-center gap-2">
+                <span className="text-lg">{item.icon}</span>
+                <span className="text-xs text-foreground/60">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* CTA */}
       <div className="text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Start Building?</h2>
