@@ -25,23 +25,23 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <article className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 md:pt-24">
       {/* Header */}
       <header className="mb-12">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-primary hover:underline mb-6"
+          className="inline-flex items-center gap-2 text-[color:var(--gold)] hover:underline mb-8 text-sm"
         >
-          ← Back to Blog
+          ← Back to Writing
         </Link>
 
-        <div className="flex items-center gap-3 mb-4 text-sm text-foreground/50">
-          <span className="px-3 py-1 bg-primary/10 text-primary rounded-full">
+        <div className="flex items-center gap-3 mb-6 text-sm">
+          <span className="rounded-full bg-[color:var(--gold)]/10 px-3 py-1 text-xs font-medium text-[color:var(--gold)]">
             {post.category}
           </span>
-          <span>{post.readTime}</span>
-          <span>•</span>
-          <span>
+          <span className="text-[color:var(--cream-faint)]" style={{ fontFamily: 'var(--font-mono)' }}>{post.readTime}</span>
+          <span className="text-[color:var(--cream-faint)]">·</span>
+          <span className="text-[color:var(--cream-faint)]">
             {new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
@@ -50,21 +50,19 @@ export default async function BlogPostPage({ params }: PageProps) {
           </span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+        <h1 className="text-4xl sm:text-5xl leading-[1.08] mb-6">
           {post.title}
         </h1>
 
-        <p className="text-xl text-foreground/70 mb-6">
+        <p className="text-xl text-[color:var(--cream-dim)] leading-relaxed">
           {post.excerpt}
         </p>
 
-        <div className="flex items-center gap-3 text-sm text-foreground/60">
-          <span>By {post.author}</span>
-        </div>
+        <p className="mt-6 text-sm text-[color:var(--cream-faint)]">By {post.author}</p>
       </header>
 
       {/* Content */}
-      <div className="prose prose-invert max-w-none">
+      <div className="prose-cream max-w-none text-lg">
         <ReactMarkdown
           rehypePlugins={[rehypeRaw, rehypeSanitize]}
           components={{
@@ -108,24 +106,24 @@ export default async function BlogPostPage({ params }: PageProps) {
       </div>
 
       {/* Footer CTA */}
-      <div className="mt-16 pt-8 border-t border-card-border">
-        <div className="text-center p-8 bg-card border border-card-border rounded-xl">
-          <h2 className="text-2xl font-bold mb-4">Enjoyed this article?</h2>
-          <p className="text-foreground/70 mb-6">
-            Get weekly insights on building production-ready agentic AI delivered to your inbox.
+      <div className="mt-16 pt-8 border-t border-[color:var(--border)]">
+        <div className="panel text-center p-8">
+          <h2 className="text-2xl mb-3">Keep exploring</h2>
+          <p className="text-[color:var(--cream-dim)] mb-6">
+            New essays and videos on the choices shaping AI — three times a week.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/newsletter"
-              className="px-6 py-3 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
+              className="rounded-full bg-[color:var(--gold)] px-6 py-3 font-semibold text-[color:var(--ink)] hover:bg-[color:var(--gold-deep)] transition-colors"
             >
-              Subscribe to Newsletter
+              Get email updates
             </Link>
             <Link
               href="/blog"
-              className="px-6 py-3 bg-card border border-card-border text-foreground font-semibold rounded-lg hover:border-primary transition-colors"
+              className="rounded-full border border-[color:var(--border)] px-6 py-3 text-[color:var(--cream)] hover:border-[color:var(--gold)]/50 transition-colors"
             >
-              Read More Articles
+              More writing
             </Link>
           </div>
         </div>

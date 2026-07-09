@@ -1,98 +1,62 @@
-import { getAllPosts, getAllCategories } from '@/lib/blog'
+import type { Metadata } from 'next'
+import { getAllPosts } from '@/lib/blog'
 import Link from 'next/link'
+import EmailCapture from '@/components/EmailCapture'
 
-export default function BlogPage() {
+export const metadata: Metadata = {
+  title: 'Writing',
+  description:
+    'Companion essays to the Byrddynasty channel — long-reads on the human choices shaping AI, weighing both sides with the sources shown.',
+}
+
+export default function WritingPage() {
   const posts = getAllPosts()
-  const categories = getAllCategories()
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      {/* Hero Section */}
-      <div className="text-center mb-16">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-          Agentic AI Blog
+    <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 md:pt-24">
+      <div className="max-w-3xl mb-16">
+        <p className="kicker mb-6">Writing</p>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[1.05]">
+          Essays for the long argument.
         </h1>
-        <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-          In-depth articles on building production-ready agentic AI systems. From architecture
-          patterns to real-world implementations.
+        <p className="mt-6 text-lg text-[color:var(--cream-dim)] leading-relaxed">
+          Companion long-reads to the channel — where a topic needs more room than a video to weigh
+          both sides and lay out the evidence.
         </p>
       </div>
 
-      {/* Categories */}
-      {categories.length > 0 && (
-        <div className="mb-12 flex flex-wrap gap-3 justify-center">
-          <button className="px-4 py-2 bg-[#1e3a5f] text-white font-medium rounded-full hover:bg-[#2a4a75] transition-colors">
-            All Posts
-          </button>
-          {categories.map((category) => (
-            <button
-              key={category}
-              className="px-4 py-2 bg-card border border-card-border text-foreground font-medium rounded-full hover:border-primary transition-colors"
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {/* Blog Posts */}
       {posts.length === 0 ? (
-        <div className="text-center py-20">
-          <div className="text-6xl mb-6">📝</div>
-          <h2 className="text-2xl font-bold mb-4">No posts yet</h2>
-          <p className="text-foreground/60 mb-8">
-            We're working on some amazing content. Check back soon!
+        <div className="panel p-12 text-center">
+          <h2 className="text-2xl mb-3">First essays are on the way.</h2>
+          <p className="text-[color:var(--cream-dim)] mb-8 max-w-lg mx-auto">
+            Drop your email and we&apos;ll send the inaugural piece the moment it&apos;s published.
           </p>
-          <div className="flex gap-4 justify-center">
-            <Link
-              href="/newsletter"
-              className="px-6 py-3 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
-            >
-              Subscribe for Updates
-            </Link>
-            <Link
-              href="/learn"
-              className="px-6 py-3 bg-card border border-card-border text-foreground font-semibold rounded-lg hover:border-primary transition-colors"
-            >
-              Explore Learning Content
-            </Link>
+          <div className="max-w-md mx-auto text-left">
+            <EmailCapture source="writing-empty" />
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {posts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="group"
-            >
-              <article className="h-full p-6 bg-card border border-card-border rounded-xl hover:border-primary transition-all">
-                <div className="flex items-center gap-3 mb-4 text-sm text-foreground/50">
-                  <span className="px-3 py-1 bg-primary/10 text-primary rounded-full">
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
+              <article className="panel h-full p-8">
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="rounded-full bg-[color:var(--gold)]/10 px-3 py-1 text-xs font-medium text-[color:var(--gold)]">
                     {post.category}
                   </span>
-                  <span>{post.readTime}</span>
+                  <span className="text-xs text-[color:var(--cream-faint)]" style={{ fontFamily: 'var(--font-mono)' }}>
+                    {post.readTime}
+                  </span>
                 </div>
-
-                <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                <h2 className="text-2xl leading-snug group-hover:text-[color:var(--gold)] transition-colors">
                   {post.title}
                 </h2>
-
-                <p className="text-foreground/70 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-foreground/50">
-                    {new Date(post.date).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
+                <p className="mt-4 text-[color:var(--cream-dim)] line-clamp-3">{post.excerpt}</p>
+                <div className="mt-6 flex items-center justify-between text-sm">
+                  <span className="text-[color:var(--cream-faint)]">
+                    {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                   </span>
-                  <span className="text-primary group-hover:underline">
-                    Read more →
-                  </span>
+                  <span className="text-[color:var(--gold)] group-hover:underline">Read →</span>
                 </div>
               </article>
             </Link>
@@ -100,18 +64,14 @@ export default function BlogPage() {
         </div>
       )}
 
-      {/* Newsletter CTA */}
-      <div className="mt-20 text-center p-8 bg-gradient-to-br from-primary/10 to-card border border-primary/20 rounded-2xl">
-        <h2 className="text-3xl font-bold mb-4">Don't Miss an Article</h2>
-        <p className="text-foreground/70 mb-6 max-w-2xl mx-auto">
-          Get weekly insights on building production-ready agentic AI delivered straight to your inbox.
+      <div className="mt-20 panel p-10 text-center">
+        <h2 className="text-3xl mb-4">Don&apos;t miss an essay</h2>
+        <p className="text-[color:var(--cream-dim)] mb-8 max-w-xl mx-auto">
+          A short note when new writing and videos land. No noise.
         </p>
-        <Link
-          href="/newsletter"
-          className="inline-block px-8 py-4 bg-[#1e3a5f] text-white font-semibold rounded-lg hover:bg-[#2a4a75] transition-colors"
-        >
-          Subscribe to Newsletter
-        </Link>
+        <div className="max-w-md mx-auto text-left">
+          <EmailCapture source="writing" />
+        </div>
       </div>
     </div>
   )

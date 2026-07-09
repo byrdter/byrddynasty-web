@@ -1,111 +1,137 @@
 @import "tailwindcss";
 
+/*
+  Byrddynasty — "Understanding AI"
+  Dark editorial register + cream citation-card motif, carried over from the
+  channel's on-screen identity (ink navy #0A0E14 · cream #F5F1E8 · gold #E0B84A).
+*/
+
 :root {
-  /* byrddynasty brand colors - updated to match logo */
-  --background: #0a1628;
-  --foreground: #ffffff;
-  --primary: #00d4ff; /* cyan/turquoise */
-  --primary-foreground: #0a1628; /* dark navy for contrast on cyan */
-  --secondary: #d4af37; /* gold */
-  --accent: #a855f7; /* purple/magenta */
-  --card-bg: #0f2847;
-  --card-border: #1e3a5f;
+  --ink: #0a0e14;          /* deep navy-black — page ground */
+  --ink-2: #0e131b;        /* raised ground */
+  --surface: #12181f;      /* cards on the dark ground */
+  --border: #232b36;       /* hairline on dark */
+  --cream: #f5f1e8;        /* primary text + citation cards */
+  --cream-dim: rgba(245, 241, 232, 0.68);
+  --cream-faint: rgba(245, 241, 232, 0.44);
+  --gold: #e0b84a;         /* accent / kickers / focal word */
+  --gold-deep: #c9a23c;
+  --red: #e4685a;          /* stakes / policy / alert */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-card: var(--card-bg);
-  --color-card-border: var(--card-border);
+  /* Map the legacy token names any surviving markup still uses onto the new palette. */
+  --color-background: var(--ink);
+  --color-foreground: var(--cream);
+  --color-primary: var(--gold);
+  --color-primary-foreground: var(--ink);
+  --color-secondary: var(--gold);
+  --color-accent: var(--red);
+  --color-card: var(--surface);
+  --color-card-border: var(--border);
 
-  /* Navy color scale for links page */
-  --color-navy-900: #0a1628;
-  --color-navy-800: #0f2847;
-  --color-navy-700: #1e3a5f;
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-red: var(--red);
 
-  /* Cyan for gradients */
-  --color-cyan-500: #00d4ff;
-  --color-cyan-400: #33ddff;
-
-  /* Purple for gradients */
-  --color-purple-500: #a855f7;
-  --color-purple-400: #c084fc;
-
-  /* Gold for gradients */
-  --color-gold-500: #d4af37;
-  --color-gold-400: #ddc055;
-
-  /* Typography */
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, 'Times New Roman', serif;
+  --font-mono: var(--font-mono-jb), 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--ink);
+  color: var(--cream);
   font-family: var(--font-sans);
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Base link styles */
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
+/* Serif is the voice of the channel — all display headings use it. */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
 }
 
-a:hover {
-  opacity: 0.8;
-}
-
-/* Utility classes for gradients (used in cards) */
-.gradient-card {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(168, 85, 247, 0.05) 50%, rgba(15, 40, 71, 0.9) 100%);
-  border: 1px solid var(--card-border);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.gradient-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.gradient-card:hover {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(168, 85, 247, 0.1) 50%, rgba(15, 40, 71, 1) 100%);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3), 0 4px 12px rgba(168, 85, 247, 0.2);
-  border-color: rgba(0, 212, 255, 0.4);
-}
-
-.gradient-card:hover::before {
-  opacity: 1;
-}
-
-/* Circuit board pattern overlay (optional) */
-.circuit-pattern {
-  background-image:
-    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* Monospace kicker — the source-line / chapter-number voice from the videos. */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* The signature motif: a cream evidence card with a gold spine, echoing the
+   on-screen citation cards. Text sits in ink on cream for maximum contrast. */
+.citation {
+  background: var(--cream);
+  color: var(--ink);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+  font-family: var(--font-serif);
+  box-shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.8);
+}
+.citation .source {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5b5445;
+}
+
+/* Dark surface card with a quiet gold hover — the default panel on the ground. */
+.panel {
+  background: linear-gradient(180deg, var(--ink-2) 0%, var(--surface) 100%);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.panel:hover {
+  border-color: rgba(224, 184, 74, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px -28px rgba(0, 0, 0, 0.9);
+}
+
+.rule-gold {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+/* Faint film grain, matching the video grain overlay. Sits above the ground. */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Prose (essays) tuned for the cream-on-ink reading register. */
+.prose-cream {
+  color: var(--cream-dim);
+}
+.prose-cream :where(strong) { color: var(--cream); }
+.prose-cream :where(a) { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
